@@ -1,0 +1,16 @@
+{
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "@ionic/angular/common",
+    "@ionic/angular/standalone"
+  ],
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css",
+    "scss": "scss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "cSpell.words": ["devkit", "haptics", "ionicons", "styleext", "tailwindcss"]
+}
