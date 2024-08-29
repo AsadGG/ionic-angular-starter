@@ -12,5 +12,6 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "cSpell.words": ["devkit", "haptics", "ionicons", "styleext", "tailwindcss"]
+  "cSpell.words": ["devkit", "haptics", "ionicons", "styleext", "tailwindcss"],
+  "css.customData": [".vscode/tailwind.json"]
 }
