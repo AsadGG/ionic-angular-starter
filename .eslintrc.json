@@ -9,8 +9,6 @@
         "createDefaultProgram": true
       },
       "extends": [
-        "airbnb-base",
-        "airbnb-typescript/base",
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
@@ -23,6 +21,8 @@
         "no-underscore-dangle": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-throw-literal": "off",
+        "@typescript-eslint/lines-between-class-members": "off",
         "import/prefer-default-export": "off",
         "@typescript-eslint/member-ordering": [
           "error",
@@ -158,7 +158,7 @@
         "@angular-eslint/component-class-suffix": [
           "error",
           {
-            "suffixes": ["Page", "Component"]
+            "suffixes": ["Page", "Component", "Modal"]
           }
         ],
         "@angular-eslint/component-selector": [

@@ -39,3 +39,31 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 // @import '@ionic/angular/css/palettes/dark.system.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+#app {
+  ion-datetime::part(calendar-day) {
+    color: black;
+  }
+
+  ion-datetime::part(calendar-day today) {
+    color: rgb(var(--color-secondary-background), 1);
+  }
+
+  ion-datetime::part(calendar-day):focus {
+    box-shadow: 0px 0px 0px 4px rgb(var(--color-secondary-background), 0.2);
+    background-color: rgb(var(--color-secondary-background), 0.2);
+  }
+
+  ion-datetime.md::part(calendar-day active),
+  ion-datetime.md::part(calendar-day active):focus {
+    border-color: rgb(var(--color-secondary-background), 1);
+    background-color: rgb(var(--color-secondary-background), 1);
+    color: #fff;
+  }
+
+  ion-datetime.md::part(calendar-day today) {
+    border-color: rgb(var(--color-secondary-background), 1);
+  }
+}

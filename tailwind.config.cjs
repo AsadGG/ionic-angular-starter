@@ -1,10 +1,17 @@
 const plugin = require('tailwindcss/plugin');
+const forms = require('@tailwindcss/forms');
 const {
   default: flattenColorPalette,
 } = require('tailwindcss/lib/util/flattenColorPalette');
 
+function withOpacity(value) {
+  return typeof value === 'function' ? value({ opacityValue: 1 }) : value;
+}
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: '#app',
+  prefix: 'tw-',
   corePlugins: {
     preflight: false,
   },
@@ -17,26 +24,64 @@ module.exports = {
       rotate: {
         30: '30deg',
       },
+      width: {
+        'fill-available': [
+          '-moz-available',
+          '-webkit-fill-available',
+          'stretch',
+        ],
+      },
+      fontFamily: {
+        montserrat: ['Montserrat', 'serif'],
+      },
+      colors: {
+        'primary-background':
+          'rgb(var(--color-primary-background), <alpha-value>)',
+        'secondary-background':
+          'rgb(var(--color-secondary-background), <alpha-value>)',
+      },
     },
   },
   plugins: [
+    forms({ strategy: 'class' }),
     plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
         {
           'ion-bg': (value) => ({
-            '--background': value,
+            '--background': withOpacity(value),
           }),
           'ion-text': (value) => ({
-            '--color': value,
+            '--color': withOpacity(value),
           }),
           'ion-color-checked': (value) => ({
-            '--color-checked': value,
+            '--color-checked': withOpacity(value),
           }),
           'ion-border-color': (value) => ({
-            '--border-color': value,
+            '--border-color': withOpacity(value),
+          }),
+          'ion-handle-bg': (value) => ({
+            '--handle-background': withOpacity(value),
+          }),
+          'ion-handle-bg-checked': (value) => ({
+            '--handle-background-checked': withOpacity(value),
+          }),
+          'ion-track-bg': (value) => ({
+            '--track-background': withOpacity(value),
+          }),
+          'ion-track-bg-checked': (value) => ({
+            '--track-background-checked': withOpacity(value),
+          }),
+          'ion-highlight-color-focused': (value) => ({
+            '--highlight-color-focused': withOpacity(value),
+          }),
+          'ion-highlight-color-invalid': (value) => ({
+            '--highlight-color-invalid': withOpacity(value),
+          }),
+          'ion-highlight-color-valid': (value) => ({
+            '--highlight-color-valid': withOpacity(value),
           }),
         },
-        { values: flattenColorPalette(theme('colors')) }
+        { type: ['color'], values: flattenColorPalette(theme('colors')) }
       );
     }),
     plugin(function ({ matchUtilities, theme }) {
@@ -153,6 +198,7 @@ module.exports = {
     }),
     plugin(function ({ addVariant }) {
       addVariant('ion-native', '&::part(native)');
+      addVariant('ion-label', '&::part(label)');
       addVariant('ion-image', '&::part(image)');
     }),
   ],
