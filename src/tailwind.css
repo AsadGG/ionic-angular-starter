@@ -1,0 +1,207 @@
+@import 'tailwindcss' prefix(tw);
+
+@theme {
+  --font-montserrat: 'Montserrat', 'sans-serif';
+  --rotate-30: '30deg';
+}
+
+@utility w-fill-available {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: stretch;
+}
+
+@utility ion-bg-* {
+  --background: --value('inherit');
+  --background: --value('transparent');
+  --opacity: calc(--modifier(integer) * 1%);
+  --background: --alpha(--value(--color- *, [color]) / var(--opacity, 100%));
+}
+
+@utility ion-text-* {
+  --color: --value('inherit');
+  --color: --value('transparent');
+  --opacity: calc(--modifier(integer) * 1%);
+  --color: --alpha(--value(--color- *, [color]) / var(--opacity, 100%));
+}
+
+@utility ion-color-checked-* {
+  --color-checked: --value('inherit');
+  --color-checked: --value('transparent');
+  --opacity: calc(--modifier(integer) * 1%);
+  --color-checked: --alpha(--value(--color- *, [color]) / var(--opacity, 100%));
+}
+@utility ion-border-color-* {
+  --border-color: --value('inherit');
+  --border-color: --value('transparent');
+  --opacity: calc(--modifier(integer) * 1%);
+  --border-color: --alpha(--value(--color- *, [color]) / var(--opacity, 100%));
+}
+@utility ion-handle-bg-* {
+  --handle-background: --value('inherit');
+  --handle-background: --value('transparent');
+  --opacity: calc(--modifier(integer) * 1%);
+  --handle-background: --alpha(
+    --value(--color- *, [color]) / var(--opacity, 100%)
+  );
+}
+@utility ion-handle-bg-checked-* {
+  --handle-background-checked: --value('inherit');
+  --handle-background-checked: --value('transparent');
+  --opacity: calc(--modifier(integer) * 1%);
+  --handle-background-checked: --alpha(
+    --value(--color- *, [color]) / var(--opacity, 100%)
+  );
+}
+@utility ion-track-bg-* {
+  --track-background: --value('inherit');
+  --track-background: --value('transparent');
+  --opacity: calc(--modifier(integer) * 1%);
+  --track-background: --alpha(
+    --value(--color- *, [color]) / var(--opacity, 100%)
+  );
+}
+@utility ion-track-bg-checked-* {
+  --track-background-checked: --value('inherit');
+  --track-background-checked: --value('transparent');
+  --opacity: calc(--modifier(integer) * 1%);
+  --track-background-checked: --alpha(
+    --value(--color- *, [color]) / var(--opacity, 100%)
+  );
+}
+@utility ion-highlight-color-focused-* {
+  --highlight-color-focused: --value('inherit');
+  --highlight-color-focused: --value('transparent');
+  --opacity: calc(--modifier(integer) * 1%);
+  --highlight-color-focused: --alpha(
+    --value(--color- *, [color]) / var(--opacity, 100%)
+  );
+}
+@utility ion-highlight-color-invalid-* {
+  --highlight-color-invalid: --value('inherit');
+  --highlight-color-invalid: --value('transparent');
+  --opacity: calc(--modifier(integer) * 1%);
+  --highlight-color-invalid: --alpha(
+    --value(--color- *, [color]) / var(--opacity, 100%)
+  );
+}
+@utility ion-highlight-color-valid-* {
+  --highlight-color-valid: --value('inherit');
+  --highlight-color-valid: --value('transparent');
+  --opacity: calc(--modifier(integer) * 1%);
+  --highlight-color-valid: --alpha(
+    --value(--color- *, [color]) / var(--opacity, 100%)
+  );
+}
+
+@utility ion-rounded-* {
+  --border-radius: --value(--radius- *);
+}
+
+@utility ion-inner-rounded-* {
+  --inner-border-radius: --value(--radius- *);
+}
+
+@utility ion-border-width-* {
+  --border-width: calc(--value('0', '2', '4', '8') * 1px);
+  --border-width: --value([ *]);
+}
+
+@utility ion-border-style-* {
+  --border-style: --value(
+    'solid',
+    'dashed',
+    'dotted',
+    'double',
+    'hidden',
+    'none'
+  );
+}
+
+@utility ion-shadow-* {
+  --box-shadow: --value(--shadow- *);
+}
+
+@utility ion-p-* {
+  --padding-top: calc(var(--tw-spacing) * --value(number));
+  --padding-bottom: calc(var(--tw-spacing) * --value(number));
+  --padding-start: calc(var(--tw-spacing) * --value(number));
+  --padding-end: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-px-* {
+  --padding-start: calc(var(--tw-spacing) * --value(number));
+  --padding-end: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-py-* {
+  --padding-top: calc(var(--tw-spacing) * --value(number));
+  --padding-bottom: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-ps-* {
+  --padding-start: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-pe-* {
+  --padding-end: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-pt-* {
+  --padding-top: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-pr-* {
+  --padding-end: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-pb-* {
+  --padding-bottom: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-pl-* {
+  --padding-start: calc(var(--tw-spacing) * --value(number));
+}
+
+@utility ion-m-* {
+  --margin-top: calc(var(--tw-spacing) * --value(number));
+  --margin-bottom: calc(var(--tw-spacing) * --value(number));
+  --margin-start: calc(var(--tw-spacing) * --value(number));
+  --margin-end: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-mx-* {
+  --margin-start: calc(var(--tw-spacing) * --value(number));
+  --margin-end: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-my-* {
+  --margin-top: calc(var(--tw-spacing) * --value(number));
+  --margin-bottom: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-ms-* {
+  --margin-start: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-me-* {
+  --margin-end: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-mt-* {
+  --margin-top: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-mr-* {
+  --margin-end: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-mb-* {
+  --margin-bottom: calc(var(--tw-spacing) * --value(number));
+}
+@utility ion-ml-* {
+  --margin-start: calc(var(--tw-spacing) * --value(number));
+}
+
+@custom-variant ion-native {
+  &::part(native) {
+    @slot;
+  }
+}
+
+@custom-variant ion-label {
+  &::part(label) {
+    @slot;
+  }
+}
+
+@custom-variant ion-image {
+  &::part(image) {
+    @slot;
+  }
+}

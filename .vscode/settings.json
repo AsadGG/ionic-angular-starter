@@ -12,6 +12,14 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "cSpell.words": ["devkit", "haptics", "ionicons", "styleext", "tailwindcss"],
+  "cSpell.words": [
+    "devkit",
+    "haptics",
+    "ionicons",
+    "maxlength",
+    "styleext",
+    "Stylesheet",
+    "tailwindcss"
+  ],
   "css.customData": [".vscode/tailwind.json"]
 }

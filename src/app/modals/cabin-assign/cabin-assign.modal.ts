@@ -12,7 +12,6 @@ import { SharedModule } from 'src/modules/shared.module';
   selector: 'app-cabin-assign',
   templateUrl: 'cabin-assign.modal.html',
   styleUrls: ['cabin-assign.modal.scss'],
-  standalone: true,
   imports: [IonicSharedModule, SharedModule],
 })
 export class CabinAssignModal implements OnInit {
@@ -22,7 +21,7 @@ export class CabinAssignModal implements OnInit {
     private readonly toastService: ToastService
   ) {}
 
-  @Input({ required: true }) isOpen: boolean = false;
+  @Input({ required: true }) isOpen = false;
   @Input({ required: true }) employee!: Employee;
   @Output() backdropClicked = new EventEmitter();
   @Output() modelSuccess = new EventEmitter();

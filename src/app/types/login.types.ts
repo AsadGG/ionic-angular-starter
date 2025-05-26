@@ -1,16 +1,16 @@
-export type LoginUserPayload = {
+export interface LoginUserPayload {
   identifier: string;
   password: string;
-};
+}
 
-export type LoginUserResponse = {
+export interface LoginUserResponse {
   success: boolean;
   code: number;
   message: string;
   data: UserData;
-};
+}
 
-export type UserData = {
+export interface UserData {
   id: string;
   tenant: string;
   firstName: string;
@@ -32,4 +32,4 @@ export type UserData = {
   updatedAt: string;
   branch: string;
   token: string;
-};
+}

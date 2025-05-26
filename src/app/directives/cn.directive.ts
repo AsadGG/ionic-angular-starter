@@ -8,15 +8,12 @@ import {
   twJoin,
 } from 'tailwind-merge';
 
-type AdditionalClassGroupIds = 'ion-bg';
-
-export const twMerge = extendTailwindMerge<AdditionalClassGroupIds>({
-  prefix: 'tw-',
+const twMerge = extendTailwindMerge<'ion-bg'>({
   extend: {
     classGroups: {
       'ion-bg': [
         {
-          'ion-bg': [fromTheme('colors')],
+          'ion-bg': [fromTheme('color')],
         },
       ],
     },
@@ -29,7 +26,6 @@ function cn(...inputs: Array<ClassNameValue>) {
 
 @Directive({
   selector: '[cn]',
-  standalone: false,
 })
 export class ClassNamesDirective implements OnChanges {
   constructor(private readonly elementRef: ElementRef<HTMLElement>) {}

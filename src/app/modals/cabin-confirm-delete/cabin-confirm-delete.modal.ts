@@ -7,11 +7,10 @@ import { SharedModule } from 'src/modules/shared.module';
   selector: 'app-cabin-confirm-delete',
   templateUrl: 'cabin-confirm-delete.modal.html',
   styleUrls: ['cabin-confirm-delete.modal.scss'],
-  standalone: true,
   imports: [IonicSharedModule, SharedModule],
 })
 export class CabinConfirmDeleteModal {
-  @Input({ required: true }) isOpen: boolean = false;
+  @Input({ required: true }) isOpen = false;
   @Input({ required: true }) cabin!: Cabin;
   @Output() backdropClicked = new EventEmitter();
   @Output() modelSuccess = new EventEmitter();

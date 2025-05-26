@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { ClassNamesDirective } from 'src/app/directives/cn.directive';
 import { IonicSharedModule } from 'src/modules/ionic-shared.module';
 import { SharedModule } from 'src/modules/shared.module';
 
@@ -6,8 +7,7 @@ import { SharedModule } from 'src/modules/shared.module';
   selector: 'app-video-player',
   templateUrl: './video-player.component.html',
   styleUrls: ['./video-player.component.scss'],
-  standalone: true,
-  imports: [IonicSharedModule, SharedModule],
+  imports: [IonicSharedModule, SharedModule, ClassNamesDirective],
 })
 export class VideoPlayerComponent {
   @ViewChild('videoPlayer', { static: false })

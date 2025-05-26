@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuController, NavController } from '@ionic/angular/standalone';
+import { ClassNamesDirective } from 'src/app/directives/cn.directive';
 import { UserService } from 'src/app/services/user.service';
 import { SubscriptionSink } from 'src/app/utilities/subscription-sink';
 import { IonicSharedModule } from 'src/modules/ionic-shared.module';
@@ -10,8 +11,7 @@ import { SharedModule } from 'src/modules/shared.module';
   selector: 'app-sidebar-menu',
   templateUrl: './sidebar-menu.component.html',
   styleUrls: ['./sidebar-menu.component.scss'],
-  standalone: true,
-  imports: [IonicSharedModule, SharedModule],
+  imports: [IonicSharedModule, SharedModule, ClassNamesDirective],
 })
 export class SidebarMenuComponent implements OnInit, OnDestroy {
   constructor(

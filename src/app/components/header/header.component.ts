@@ -8,12 +8,11 @@ import { IonicSharedModule } from 'src/modules/ionic-shared.module';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  standalone: true,
   imports: [IonicSharedModule, TitleCasePipe],
 })
 export class HeaderComponent {
   constructor(private readonly menuController: MenuController) {}
-  @Input({ required: true }) name: string = 'Title';
+  @Input({ required: true }) name = 'Title';
   @Input({ required: true }) type: 'MENU' | 'BACK' = 'MENU';
   @Input() defaultHref = '/dashboard';
 

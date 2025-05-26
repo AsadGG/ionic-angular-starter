@@ -7,7 +7,6 @@ import { SharedModule } from 'src/modules/shared.module';
   selector: 'app-custom-select',
   templateUrl: './custom-select.component.html',
   styleUrls: ['./custom-select.component.scss'],
-  standalone: true,
   imports: [IonicSharedModule, SharedModule],
 })
 export class CustomSelectComponent {
@@ -17,9 +16,9 @@ export class CustomSelectComponent {
 
   @Input({ required: true }) items: Array<Record<string, any>> = [];
 
-  @Input({ required: true }) displayProperty: string = '';
+  @Input({ required: true }) displayProperty = '';
 
-  @Input({ required: true }) compareProperty: string = '';
+  @Input({ required: true }) compareProperty = '';
 
   @Input() selectedItem: Record<string, any> | null = null;
 

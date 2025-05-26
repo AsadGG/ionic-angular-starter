@@ -7,13 +7,12 @@ import { SharedModule } from 'src/modules/shared.module';
   selector: 'app-cabin-edit',
   templateUrl: 'cabin-edit.modal.html',
   styleUrls: ['cabin-edit.modal.scss'],
-  standalone: true,
   imports: [IonicSharedModule, SharedModule],
 })
 export class CabinEditModal {
   constructor(private readonly formBuilder: NonNullableFormBuilder) {}
 
-  @Input({ required: true }) isOpen: boolean = false;
+  @Input({ required: true }) isOpen = false;
   @Output() backdropClicked = new EventEmitter();
   @Output() modelSuccess = new EventEmitter();
 

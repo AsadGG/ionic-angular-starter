@@ -8,15 +8,14 @@ import {
 } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { SharedModule } from 'src/modules/shared.module';
+import { ClassNamesDirective } from 'src/app/directives/cn.directive';
 
 @Component({
   selector: 'app-field-error-message',
   templateUrl: './field-error-message.component.html',
   styleUrls: ['./field-error-message.component.scss'],
-  standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SharedModule],
+  imports: [ClassNamesDirective],
 })
 export class FieldErrorMessageComponent implements OnInit, OnDestroy {
   constructor(private readonly changeDetectorRef: ChangeDetectorRef) {}
@@ -87,8 +86,7 @@ export class FieldErrorMessageComponent implements OnInit, OnDestroy {
 
     const keys = Object.keys(this.control.errors);
 
-    for (let index = 0; index < keys.length; index += 1) {
-      const key = keys[index];
+    for (const key of keys) {
       const unknownError = this.control.errors[key];
       const unknownErrorMessage = this.errorMessages[key];
       if (unknownError && unknownErrorMessage) {

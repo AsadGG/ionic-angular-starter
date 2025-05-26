@@ -1,6 +1,6 @@
-<section class="tw-w-fill-available" [id]="'custom-select-' + name">
+<section class="tw:w-fill-available" [id]="'custom-select-' + name">
   <button
-    class="ion-activatable tw-relative tw-flex tw-min-h-12 tw-w-full tw-items-center tw-justify-between tw-overflow-hidden tw-rounded-2xl tw-bg-secondary-background/10 tw-p-4 tw-text-secondary-background disabled:tw-bg-secondary-background/5"
+    class="ion-activatable tw:bg-secondary-background/10 tw:text-secondary-background disabled:tw:bg-secondary-background/5 tw:relative tw:flex tw:min-h-12 tw:w-full tw:items-center tw:justify-between tw:overflow-hidden tw:rounded-2xl tw:p-4"
     #searchButton
     type="button"
     [disabled]="disabled"
@@ -9,7 +9,7 @@
     @if (!searchButton.disabled) {
       <ion-ripple-effect />
     }
-    <div class="tw-font-roboto tw-text-sm tw-font-medium">
+    <div class="tw:font-roboto tw:text-sm tw:font-medium">
       {{ selectedDisplayText }}
     </div>
     <ion-icon name="chevron-down" />
@@ -23,9 +23,9 @@
   >
     <ng-template>
       <ion-content>
-        <div class="tw-px-2 tw-pt-2">
+        <div class="tw:px-2 tw:pt-2">
           <ion-input
-            class="tw-text-start tw-font-montserrat tw-text-sm tw-font-medium tw-text-secondary-background tw-ion-bg-secondary-background/10 tw-ion-rounded-2xl tw-ion-border-width-0"
+            class="tw:text-secondary-background tw:ion-bg-secondary-background/10 tw:text-start tw:font-montserrat tw:text-sm tw:font-medium tw:ion-border-width-0 tw:ion-rounded-2xl"
             type="text"
             size="sm"
             fill="outline"
@@ -36,26 +36,26 @@
           </ion-input>
         </div>
         <ion-content
-          class="tw-h-[calc(100%-2vh)] tw-w-fill-available tw-overflow-y-scroll tw-ion-px-2 tw-ion-py-1"
+          class="tw:h-[calc(100%-2vh)] tw:w-fill-available tw:overflow-y-scroll tw:ion-px-2 tw:ion-py-1"
           [scrollY]="true"
         >
           @for (item of getFilteredItems(); track item[compareProperty]) {
             <button
-              class="ion-activatable tw-relative tw-my-2 tw-flex tw-w-full tw-items-center tw-overflow-hidden tw-rounded-md tw-bg-secondary-background/10 tw-p-2 tw-text-secondary-background"
+              class="ion-activatable tw:bg-secondary-background/10 tw:text-secondary-background tw:relative tw:my-2 tw:flex tw:w-full tw:items-center tw:overflow-hidden tw:rounded-md tw:p-2"
               (click)="selectItem(item, customSelectPopover)"
             >
               <ion-ripple-effect />
               @if (isSameItem(item)) {
-                <ion-icon class="tw-mr-2 tw-text-xl" name="checkmark" />
+                <ion-icon class="tw:mr-2 tw:text-xl" name="checkmark" />
               }
               <div
-                class="tw-font-roboto tw-grow tw-text-start tw-text-sm tw-font-medium tw-text-secondary-background"
+                class="tw:font-roboto tw:text-secondary-background tw:grow tw:text-start tw:text-sm tw:font-medium"
               >
                 {{ getDisplayText(item) }}
               </div>
             </button>
           } @empty {
-            <div class="tw-p-2">No Item Available</div>
+            <div class="tw:p-2">No Item Available</div>
           }
         </ion-content>
       </ion-content>

@@ -10,7 +10,6 @@ import { SharedModule } from 'src/modules/shared.module';
   selector: 'app-splash',
   templateUrl: 'splash.page.html',
   styleUrls: ['splash.page.scss'],
-  standalone: true,
   imports: [IonicSharedModule, SharedModule],
 })
 export class SplashPage {

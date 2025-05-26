@@ -7,11 +7,10 @@ import { SharedModule } from 'src/modules/shared.module';
   selector: 'app-cabin-confirm-reassign',
   templateUrl: 'cabin-confirm-reassign.modal.html',
   styleUrls: ['cabin-confirm-reassign.modal.scss'],
-  standalone: true,
   imports: [IonicSharedModule, SharedModule],
 })
 export class CabinConfirmReassignModal {
-  @Input({ required: true }) isOpen: boolean = false;
+  @Input({ required: true }) isOpen = false;
   @Input({ required: true }) employee!: Employee;
   @Output() backdropClicked = new EventEmitter();
   @Output() modelSuccess = new EventEmitter();

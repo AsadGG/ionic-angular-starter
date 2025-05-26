@@ -20,6 +20,8 @@
     "$DEFAULT",
     "$ANGULAR"
   ],
+  "tailwindStylesheet": "src/tailwind.css",
+  "tailwindAttributes": ["cn"],
   "overrides": [
     {
       "files": "*.html",

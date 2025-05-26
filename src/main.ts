@@ -10,8 +10,8 @@ import {
   provideIonicAngular,
 } from '@ionic/angular/standalone';
 import { AppComponent } from './app/app.component';
+import { routes } from './app/app.routes';
 import { AuthenticationInterceptor } from './app/interceptors/authentication.interceptor';
-import { routes } from './app/routes';
 
 bootstrapApplication(AppComponent, {
   providers: [
