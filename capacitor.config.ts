@@ -4,6 +4,9 @@ const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
   appName: 'ionic-angular-starter',
   webDir: 'www',
+  android: {
+    adjustMarginsForEdgeToEdge: 'force',
+  },
 };
 
 export default config;

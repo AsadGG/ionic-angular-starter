@@ -1,1 +1,1 @@
-# sports-fan-app
+# ionic-angular-starter
