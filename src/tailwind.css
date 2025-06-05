@@ -123,69 +123,81 @@
 }
 
 @utility ion-p-* {
-  --padding-top: calc(var(--tw-spacing) * --value(number));
-  --padding-bottom: calc(var(--tw-spacing) * --value(number));
-  --padding-start: calc(var(--tw-spacing) * --value(number));
-  --padding-end: calc(var(--tw-spacing) * --value(number));
+  --ion-spacing: --spacing(--value(number));
+
+  --padding-top: var(--ion-spacing);
+  --padding-bottom: var(--ion-spacing);
+  --padding-start: var(--ion-spacing);
+  --padding-end: var(--ion-spacing);
 }
 @utility ion-px-* {
-  --padding-start: calc(var(--tw-spacing) * --value(number));
-  --padding-end: calc(var(--tw-spacing) * --value(number));
+  --ion-spacing: --spacing(--value(number));
+
+  --padding-start: var(--ion-spacing);
+  --padding-end: var(--ion-spacing);
 }
 @utility ion-py-* {
-  --padding-top: calc(var(--tw-spacing) * --value(number));
-  --padding-bottom: calc(var(--tw-spacing) * --value(number));
+  --ion-spacing: --spacing(--value(number));
+
+  --padding-top: var(--ion-spacing);
+  --padding-bottom: var(--ion-spacing);
 }
 @utility ion-ps-* {
-  --padding-start: calc(var(--tw-spacing) * --value(number));
+  --padding-start: --spacing(--value(number));
 }
 @utility ion-pe-* {
-  --padding-end: calc(var(--tw-spacing) * --value(number));
+  --padding-end: --spacing(--value(number));
 }
 @utility ion-pt-* {
-  --padding-top: calc(var(--tw-spacing) * --value(number));
+  --padding-top: --spacing(--value(number));
 }
 @utility ion-pr-* {
-  --padding-end: calc(var(--tw-spacing) * --value(number));
+  --padding-end: --spacing(--value(number));
 }
 @utility ion-pb-* {
-  --padding-bottom: calc(var(--tw-spacing) * --value(number));
+  --padding-bottom: --spacing(--value(number));
 }
 @utility ion-pl-* {
-  --padding-start: calc(var(--tw-spacing) * --value(number));
+  --padding-start: --spacing(--value(number));
 }
 
 @utility ion-m-* {
-  --margin-top: calc(var(--tw-spacing) * --value(number));
-  --margin-bottom: calc(var(--tw-spacing) * --value(number));
-  --margin-start: calc(var(--tw-spacing) * --value(number));
-  --margin-end: calc(var(--tw-spacing) * --value(number));
+  --ion-spacing: --spacing(--value(number));
+
+  --margin-top: var(--ion-spacing);
+  --margin-bottom: var(--ion-spacing);
+  --margin-start: var(--ion-spacing);
+  --margin-end: var(--ion-spacing);
 }
 @utility ion-mx-* {
-  --margin-start: calc(var(--tw-spacing) * --value(number));
-  --margin-end: calc(var(--tw-spacing) * --value(number));
+  --ion-spacing: --spacing(--value(number));
+
+  --margin-start: var(--ion-spacing);
+  --margin-end: var(--ion-spacing);
 }
 @utility ion-my-* {
-  --margin-top: calc(var(--tw-spacing) * --value(number));
-  --margin-bottom: calc(var(--tw-spacing) * --value(number));
+  --ion-spacing: --spacing(--value(number));
+
+  --margin-top: var(--ion-spacing);
+  --margin-bottom: var(--ion-spacing);
 }
 @utility ion-ms-* {
-  --margin-start: calc(var(--tw-spacing) * --value(number));
+  --margin-start: --spacing(--value(number));
 }
 @utility ion-me-* {
-  --margin-end: calc(var(--tw-spacing) * --value(number));
+  --margin-end: --spacing(--value(number));
 }
 @utility ion-mt-* {
-  --margin-top: calc(var(--tw-spacing) * --value(number));
+  --margin-top: --spacing(--value(number));
 }
 @utility ion-mr-* {
-  --margin-end: calc(var(--tw-spacing) * --value(number));
+  --margin-end: --spacing(--value(number));
 }
 @utility ion-mb-* {
-  --margin-bottom: calc(var(--tw-spacing) * --value(number));
+  --margin-bottom: --spacing(--value(number));
 }
 @utility ion-ml-* {
-  --margin-start: calc(var(--tw-spacing) * --value(number));
+  --margin-start: --spacing(--value(number));
 }
 
 @custom-variant ion-native {
