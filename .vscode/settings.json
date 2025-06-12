@@ -21,5 +21,6 @@
     "Stylesheet",
     "tailwindcss"
   ],
-  "css.customData": [".vscode/tailwind.json"]
+  "css.customData": [".vscode/tailwind.json"],
+  "tailwindCSS.experimental.configFile": "src/tailwind.css"
 }
