@@ -1,4 +1,10 @@
-@import 'tailwindcss' prefix(tw);
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme) prefix(tw);
+@import 'tailwindcss/preflight.css' layer(base);
+#app {
+  @import 'tailwindcss/utilities.css' layer(utilities);
+}
 
 @theme {
   --font-montserrat: 'Montserrat', 'sans-serif';
